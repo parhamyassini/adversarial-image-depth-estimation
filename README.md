@@ -38,7 +38,7 @@ Also, we use different the loss functions to (1) compare the structural similari
 
 ##  Network Architecture
 
-![Diagram of the proposed network architecture](../docs/net-arch.png)
+![Diagram of the proposed network architecture](./docs/net-arch.png)
 
 Given an input image, the encoder extracts multi-scale features. The decoder converts the last 1/32 scale feature to get a 1/2 scale feature. Each of the multi-scale features is up-scaled to 1/2 scale and fused by the multi-scale feature fusion module (MFF). The outputs of D and MFF and are refined by the refinement module ( R ) to obtain the final depth map. 
 
@@ -54,10 +54,10 @@ The data augmentation is identical to the baseline method: Flip, Rotation and Co
 
 Due to the time limit, we trained our network 5 epochs instead of 20 epochs that the baseline method used. We also, trained the baseline network for 5 epochs to perform a fair comparison between results. The initial learning rate is 0.0001, and reduce it to 10% for every epoch after the second iteration.
 
-![Example of the output results from test dataset](../docs/eval-example.png)
+![Example of the output results from test dataset](./docs/eval-example.png)
 
 Beside test-cases from the dataset, we evaluate the model on new indoor images taken using smartphone camera. Since ground truth values for depth is not available, it is only used for visual comparison. As seen in the figure below, our results show improved object boundries.
 
-![Visual comparison of the result for the purposed method](../docs/eval-visual.png)
+![Visual comparison of the result for the purposed method](./docs/eval-visual.png)
 
 > For quantitative comparison please refor to the report document.
