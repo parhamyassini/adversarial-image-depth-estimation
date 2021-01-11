@@ -36,14 +36,17 @@ We extend the baseline method of [Hu et al. (2018)](https://arxiv.org/pdf/1803.0
 
 Also, we use different the loss functions to (1) compare the structural similarity of the reconstructed depth map and ground truth depth and (2) penalize the depth error on nearby objects depth more than distant objects.  
 
-##  Method
+##  Network Architecture
 
-### Network Architecture
+![Diagram of the proposed network architecture](../docs/net-arch.png)
+
 Given an input image, the encoder extracts multi-scale features. The decoder converts the last 1/32 scale feature to get a 1/2 scale feature. Each of the multi-scale features is up-scaled to 1/2 scale and fused by the multi-scale feature fusion module (MFF). The outputs of D and MFF and are refined by the refinement module ( R ) to obtain the final depth map. 
 
 ### Descrimnator Network
 A discriminator network is added to differentiate between fake and real depth maps. The depth map generator tries to fool the discriminator with generated depth maps while the discriminator is fed with the ground truth depth maps learns to distinguish fake depth maps from the real ones. Accordingly, the adversarial loss would force the depth map generator to produce outputs that follow the natural distribution of the depth maps in the data set.
 
+> For loss functions and intuition behind them, please refer to the project poster or report.
+> 
 ## Results
 We evaluate our model using the NYU-Depth V2 dataset. The dataset consists of a variety of indoor scenes from which we used 50K samples for the training phase and 1K samples for testing. 
 
@@ -51,6 +54,10 @@ The data augmentation is identical to the baseline method: Flip, Rotation and Co
 
 Due to the time limit, we trained our network 5 epochs instead of 20 epochs that the baseline method used. We also, trained the baseline network for 5 epochs to perform a fair comparison between results. The initial learning rate is 0.0001, and reduce it to 10% for every epoch after the second iteration.
 
-Beside test-cases from the dataset, we evaluate the model on new images taken with smartphone camera. Since ground truth values for depth is not available, it is only used for visual comparison. As seen in the figure below, our results show improved object boundries.
+![Example of the output results from test dataset](../docs/eval-example.png)
+
+Beside test-cases from the dataset, we evaluate the model on new indoor images taken using smartphone camera. Since ground truth values for depth is not available, it is only used for visual comparison. As seen in the figure below, our results show improved object boundries.
+
+![Visual comparison of the result for the purposed method](../docs/eval-visual.png)
 
 > For quantitative comparison please refor to the report document.
