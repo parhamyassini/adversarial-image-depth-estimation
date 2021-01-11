@@ -3,12 +3,13 @@
 > This work was done as the Final Project of CMPT 726 Fall 2019 (Instructor: [Greg Mori](https://www.cs.sfu.ca/~mori/)).
 
 Contributors:
-Parham Yassini, Taher Ahmadi, Elnaz Mehrzadeh, Dorsa Dadjoo*, Fatemeh Hasiri
+Parham Yassini, Taher Ahmadi, Elnaz Mehrzadeh, Dorsa Dadjoo, Fatemeh Hasiri
 
 For a quick overview of the project please check the [project poster](./docs/poster.pdf).
+
 For a more detailed analysis please checkout the [projet report](./docs/report.pdf).
  
-### Usage guide
+### Getting Started
 Download the trained models and put in the root of project:
 [Depth estimation networks](https://drive.google.com/file/d/1IJ8XvPOb3k-aEg0UX5Zp96sA-8C_PthB/view?usp=sharing) <br>
 Download the data and put it in the the following structure:
