@@ -5,9 +5,7 @@
 Contributors:
 Parham Yassini, Taher Ahmadi, Elnaz Mehrzadeh, Dorsa Dadjoo, Fatemeh Hasiri
 
-For a quick overview of the project please check the [project poster](./docs/poster.pdf).
-
-For a more detailed analysis please checkout the [projet report](./docs/report.pdf).
+For a quick overview of the project please check the [project poster](./docs/poster.pdf). For more detailed analysis please check out the [projet report](./docs/report.pdf).
  
 ### Getting Started
 Download the trained models and put in the root of project:
