@@ -5,7 +5,7 @@
 Contributors:
 Parham Yassini, Taher Ahmadi, Elnaz Mehrzadeh, Dorsa Dadjoo, Fatemeh Hasiri
 
-For a quick overview of the project please check the [project poster](./docs/poster.pdf). For more detailed analysis please check out the [projet report](./docs/report.pdf).
+For a quick overview of the project please check the [project poster](./docs/poster.pdf). For more detailed analysis please check out the [project report](./docs/report.pdf).
  
 ### Getting Started
 Download the trained models and put in the root of project:
@@ -33,7 +33,7 @@ Most Existing methods (1) Suffer from loss of spatial resolution in the estimate
 ### Contributions 
 We extend the baseline method of [Hu et al. (2018)](https://arxiv.org/pdf/1803.08673.pdf)  by adding a discriminator network and introducing two new loss functions. The discriminator network (D) is trained using ground truth depth maps from the dataset and reconstructed depth maps from the depth estimation module (generator). The discriminator forces the depth estimator to generate depth maps that are more similar to the real depth maps.
 
-Also, we use different the loss functions to (1) compare the structural similarity of the reconstructed depth map and ground truth depth and (2) penalize the depth error on nearby objects depth more than distant objects.  
+Also, we use different loss functions to (1) compare the structural similarity of the reconstructed depth map and ground truth depth and (2) penalize the depth error on nearby objects depth more than distant objects.  
 
 ##  Network Architecture
 
@@ -55,8 +55,8 @@ Due to the time limit, we trained our network 5 epochs instead of 20 epochs that
 
 ![Example of the output results from test dataset](./docs/eval-example.png)
 
-Beside test-cases from the dataset, we evaluate the model on new indoor images taken using smartphone camera. Since ground truth values for depth is not available, it is only used for visual comparison. As seen in the figure below, our results show improved object boundries.
+In addition to test-cases from the dataset, we evaluate the model on new indoor images taken using a commodity smartphone camera. Since ground truth values for depth is not available, it is only used for visual comparison. As seen in the figure below, our results show improved object boundaries.
 
 ![Visual comparison of the result for the purposed method](./docs/eval-visual.png)
 
-> For quantitative comparison please refor to the report document.
+> For quantitative comparison please refer to the report document.
